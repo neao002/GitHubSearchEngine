@@ -54,3 +54,18 @@ form.addEventListener("submit", (e) => {
     search.value = "";
   }
 });
+
+function addReposToCard(repos) {
+  const reposEl = document.getElementById("repos");
+
+  repos.forEach((repo) => {
+    const repoEl = document.createElement("a");
+    repoE1.classList.add("repo");
+
+    repoE1.href = repo.html_url;
+    repoE1.target = "_blank";
+    repoE1.innerText = repo.name;
+
+    reposE1.appenchild(repoEl);
+  });
+}
